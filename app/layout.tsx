@@ -89,7 +89,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Prime Tornearia" />
+        <meta name="apple-mobile-web-app-title" content="Marcio Tornearia" />
       </head>
       <body
         className={`${inter.variable} ${archivo.variable} font-sans antialiased`}
