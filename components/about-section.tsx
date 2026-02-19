@@ -55,7 +55,7 @@ export function AboutSection() {
               </span>
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              A <strong className="text-foreground">Marcio Tornearia</strong>{" "}
+              A <strong className="text-foreground">Márcio Tornearia</strong>{" "}
               nasceu da paixão por transformar metal em soluções de alta
               precisão. Localizada em{" "}
               <strong className="text-foreground">Navegantes - SC</strong>,
