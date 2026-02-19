@@ -47,10 +47,9 @@ export const SITE_CONFIG = {
 
   // Redes Sociais
   social: {
-    instagram: "https://instagram.com/marciotornearia",
-    facebook: "https://facebook.com/marciotornearia",
-    twitter: "https://twitter.com/marciotornearia",
-    linkedin: "https://linkedin.com/company/marciotornearia",
+    instagram: "https://www.instagram.com/marcio_tornearia/",
+    facebook: "https://www.facebook.com/profile.php?id=100066677389181",
+    threads: "https://www.threads.com/@marcio_tornearia",
   },
 
   // Configurações de SEO (Essencial para o site aparecer no Google)
