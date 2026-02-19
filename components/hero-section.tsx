@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react"
+import { MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { SITE_CONFIG } from "@/src/config/site-config"
@@ -49,7 +49,7 @@ export function HeroSection() {
                   className="gap-2 bg-gradient-to-r from-primary to-orange-400 px-8 text-primary-foreground hover:scale-105 hover:shadow-xl transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 w-full sm:w-auto"
                   aria-label={SITE_CONFIG.hero.ctaText}
                 >
-                  <Phone className="h-5 w-5" aria-hidden="true" />
+                  <MessageCircle className="h-5 w-5" aria-hidden="true" />
                   {SITE_CONFIG.hero.ctaText}
                 </Button>
               </a>
