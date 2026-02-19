@@ -1,4 +1,4 @@
-import { MapPin, Phone, ArrowRight, Instagram, Facebook, MessageCircle } from "lucide-react"
+import { MapPin, Phone, ArrowRight, Instagram, Facebook } from "lucide-react"
 import { SITE_CONFIG } from "@/src/config/site-config"
 
 export function ContactFooter() {
@@ -100,15 +100,6 @@ export function ContactFooter() {
                       aria-label="Facebook"
                     >
                       <Facebook className="h-4 w-4" strokeWidth={1.5} />
-                    </a>
-                    <a 
-                      href={SITE_CONFIG.social.threads}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 text-white/80 hover:text-white hover:bg-gradient-to-br hover:from-orange-500 hover:to-orange-400 transition-all duration-300 hover:scale-110 hover:rotate-12 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
-                      aria-label="Threads"
-                    >
-                      <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
                     </a>
                   </div>
                 </div>
