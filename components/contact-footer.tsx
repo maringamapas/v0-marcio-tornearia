@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { MapPin, Phone, ArrowRight, Instagram, Facebook } from "lucide-react"
 import { SITE_CONFIG } from "@/src/config/site-config"
 
@@ -12,14 +13,15 @@ export function ContactFooter() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
               {/* Left Column - Brand & Contact */}
               <div className="lg:col-span-7">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-12 w-12 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
-                    <span className="text-xl font-bold text-white">{SITE_CONFIG.client.shortName[0]}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-white tracking-tight">{SITE_CONFIG.client.name}</h3>
-                    <p className="text-white/60 text-sm">{SITE_CONFIG.footer.description}</p>
-                  </div>
+                <div className="mb-6">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-h-marcio-tornearia-QKsc4epxL3l2Md34s9jaWkzkdRRqIH.png"
+                    alt="Marcio Tornearia"
+                    width={200}
+                    height={70}
+                    className="h-14 w-auto mb-4"
+                  />
+                  <p className="text-white/60 text-sm">{SITE_CONFIG.footer.description}</p>
                 </div>
 
                 <div className="space-y-4 mb-8">
