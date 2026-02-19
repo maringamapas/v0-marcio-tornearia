@@ -2,7 +2,6 @@ import React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Archivo } from "next/font/google"
 import { SITE_CONFIG } from "@/src/config/site-config"
-import { ThemeProvider } from "@/components/theme-provider"
 
 import "./globals.css"
 
@@ -85,7 +84,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR">
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -95,14 +94,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${archivo.variable} font-sans antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   )
