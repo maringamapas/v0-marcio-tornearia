@@ -3,7 +3,7 @@ import { SITE_CONFIG } from "@/src/config/site-config"
 
 export function ContactFooter() {
   return (
-    <section className="w-full bg-neutral-900">
+    <footer className="w-full bg-neutral-900">
       <div className="relative w-full px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden">
           <div className="relative z-10 py-10 sm:py-12 md:py-16">
@@ -146,6 +146,6 @@ export function ContactFooter() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }

@@ -33,6 +33,8 @@ export function Header() {
           ? "bg-accent/98 backdrop-blur-lg shadow-2xl"
           : "bg-transparent"
       }`}
+      role="navigation"
+      aria-label="Navegação principal"
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="flex h-20 items-center justify-between">
@@ -52,12 +54,12 @@ export function Header() {
             </div>
           </a>
 
-          <nav className="hidden items-center gap-1 lg:flex">
+          <nav className="hidden items-center gap-1 lg:flex" aria-label="Links principais">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-4 py-2.5 text-sm font-medium text-primary-foreground/80 transition-all duration-300 hover:text-primary hover:bg-primary/10 hover:scale-105"
+                className="rounded-lg px-4 py-2.5 text-sm font-medium text-primary-foreground/80 transition-all duration-300 hover:text-primary hover:bg-primary/10 hover:scale-105 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 {link.label}
               </a>
@@ -92,12 +94,12 @@ export function Header() {
 
       {isOpen && (
         <div className="bg-accent/98 backdrop-blur-lg shadow-2xl lg:hidden animate-slide-up" id="mobile-menu">
-          <nav className="flex flex-col px-4 pb-6" role="navigation" aria-label="Menu principal mobile">
+          <nav className="flex flex-col px-4 pb-6" aria-label="Menu mobile">
             {navLinks.map((link, index) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="border-b border-accent-foreground/10 py-4 text-sm font-medium text-primary-foreground/80 transition-all duration-300 hover:text-primary hover:pl-2"
+                className="border-b border-accent-foreground/10 py-4 text-sm font-medium text-primary-foreground/80 transition-all duration-300 hover:text-primary hover:pl-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
                 onClick={() => setIsOpen(false)}
                 style={{ animationDelay: `${index * 0.05}s` }}
               >

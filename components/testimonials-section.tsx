@@ -71,7 +71,7 @@ export function TestimonialsSection() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <div
+            <article
               key={testimonial.name}
               className="rounded-2xl bg-[#2a2420] p-8 transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -79,32 +79,33 @@ export function TestimonialsSection() {
               <div className="flex items-start gap-4 mb-6">
                 <img
                   src={testimonial.avatar}
-                  alt={testimonial.name}
+                  alt={`Avatar de ${testimonial.name}`}
                   className="w-16 h-16 rounded-full object-cover border-4 border-primary/20"
                 />
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-white mb-1">
                     {testimonial.name}
                   </h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-white/80 text-sm">
                     {testimonial.role}
                   </p>
                 </div>
               </div>
               
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4" aria-label={`Avaliação: ${testimonial.rating} de 5 estrelas`}>
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star
                     key={`star-${testimonial.name}-${i}`}
                     className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    aria-hidden="true"
                   />
                 ))}
               </div>
               
-              <blockquote className="text-white leading-relaxed">
+              <blockquote className="text-white/95 leading-relaxed italic">
                 {`"${testimonial.content}"`}
               </blockquote>
-            </div>
+            </article>
           ))}
         </div>
       </div>
