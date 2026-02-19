@@ -49,12 +49,25 @@ function ImageModal({ src, onClose }: { src: string | null; onClose: () => void 
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose()
+    }
+    if (mounted) {
+      window.addEventListener("keydown", handleKeyDown)
+      return () => window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [mounted, onClose])
+
   if (!src || !mounted) return null
 
   return createPortal(
     <div
       className="fixed inset-0 bg-black/90 flex justify-center items-center z-50 opacity-100"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Visualização ampliada de imagem"
     >
       <img
         src={src}
@@ -63,8 +76,10 @@ function ImageModal({ src, onClose }: { src: string | null; onClose: () => void 
         onClick={(e) => e.stopPropagation()}
       />
       <button
-        className="absolute top-5 right-5 text-white text-4xl font-bold hover:text-primary transition-colors"
+        className="absolute top-5 right-5 text-white text-4xl font-bold hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
         onClick={onClose}
+        aria-label="Fechar visualização"
+        type="button"
       >
         &times;
       </button>
@@ -106,14 +121,17 @@ export function GaleriaFotos() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[300px] gap-4">
             {galleryData.map((img) => (
-              <div
+              <button
                 key={img.id}
-                className={`group cursor-pointer relative overflow-hidden rounded-lg ${img.span}`}
+                className={`group cursor-pointer relative overflow-hidden rounded-lg ${img.span} focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all`}
                 onClick={() => openModal(img.src)}
+                type="button"
+                aria-label={`Visualizar ${img.title}`}
               >
                 <img
                   src={img.src}
                   alt={img.alt}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -121,7 +139,7 @@ export function GaleriaFotos() {
                     {img.title}
                   </p>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>

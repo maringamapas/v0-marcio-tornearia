@@ -31,9 +31,9 @@ export function AboutSection() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:scale-[1.02]">
               <Image
                 src="/images/about-tornearia.jpg"
-                alt="Profissional da Prime Tornearia trabalhando em equipamento de usinagem"
+                alt="Profissional da Prime Tornearia trabalhando em equipamento de usinagem com precisão"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
