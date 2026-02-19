@@ -1,7 +1,7 @@
 {
   "name": "Prime Tornearia - Usinagem de Precisão",
   "short_name": "Prime Tornearia",
-  "description": "Tornearia, fresagem e usinagem CNC de precisão em Maringá - PR",
+  "description": "Tornearia, fresagem e usinagem CNC de precisão em Navegantes - SC",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#1a1a1a",
@@ -21,6 +21,9 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["business", "productivity"],
+  "categories": [
+    "business",
+    "productivity"
+  ],
   "lang": "pt-BR"
 }
