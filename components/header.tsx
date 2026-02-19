@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SITE_CONFIG } from "@/src/config/site-config"
@@ -39,15 +38,20 @@ export function Header() {
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <a href="#inicio" className="flex items-center">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-h-marcio-tornearia-wiIaCcIN9QvjlOPQRGNJy2qULTybZ6.png"
-              alt="Marcio Tornearia"
-              width={180}
-              height={60}
-              className="h-12 w-auto"
-              priority
-            />
+          <a href="#inicio" className="flex items-center gap-2">
+            <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary">
+              <span className="font-display text-lg font-bold text-primary-foreground">
+                {SITE_CONFIG.client.shortName[0]}
+              </span>
+            </div>
+            <div>
+              <span className="font-display text-xl font-bold text-primary-foreground">
+                {SITE_CONFIG.client.shortName}
+              </span>
+              <span className="block text-xs uppercase tracking-widest text-primary-foreground/70">
+                {SITE_CONFIG.client.name.replace(SITE_CONFIG.client.shortName, '').trim()}
+              </span>
+            </div>
           </a>
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Links principais">
