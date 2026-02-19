@@ -13,7 +13,6 @@ export function HeroSection() {
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         className="object-cover"
         priority
-        quality={85}
       />
       <div className="absolute inset-0 bg-accent/80" />
 
