@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react"
+import { Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { SITE_CONFIG } from "@/src/config/site-config"
@@ -56,11 +56,10 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent hover:scale-105 transition-all duration-300 backdrop-blur-sm focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 w-full sm:w-auto flex-1 sm:flex-none"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent hover:scale-105 transition-all duration-300 backdrop-blur-sm focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 w-full sm:w-auto flex-1 sm:flex-none"
                 aria-label={`Telefone: ${SITE_CONFIG.hero.ctaSecondary}`}
               >
-                <span><strong>{SITE_CONFIG.hero.ctaSecondary}</strong></span>
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                <span className="text-xl font-bold">{SITE_CONFIG.hero.ctaSecondary}</span>
               </Button>
             </div>
 
