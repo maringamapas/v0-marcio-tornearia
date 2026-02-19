@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react"
+import { MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { SITE_CONFIG } from "@/src/config/site-config"
@@ -37,30 +37,29 @@ export function HeroSection() {
               {SITE_CONFIG.hero.subtitle}
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row animate-scale-in" style={{ animationDelay: '0.4s' }}>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center sm:items-center sm:max-w-2xl animate-scale-in" style={{ animationDelay: '0.4s' }}>
               <a
                 href={SITE_CONFIG.hero.ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
+                className="focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg flex-1 sm:flex-none"
               >
                 <Button
                   size="lg"
-                  className="gap-2 bg-gradient-to-r from-primary to-orange-400 px-8 text-primary-foreground hover:scale-105 hover:shadow-xl transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  className="gap-2 bg-gradient-to-r from-primary to-orange-400 px-8 text-primary-foreground hover:scale-105 hover:shadow-xl transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 w-full sm:w-auto"
                   aria-label={SITE_CONFIG.hero.ctaText}
                 >
-                  <Phone className="h-5 w-5" aria-hidden="true" />
+                  <MessageCircle className="h-5 w-5" aria-hidden="true" />
                   {SITE_CONFIG.hero.ctaText}
                 </Button>
               </a>
               <Button
                 size="lg"
                 variant="outline"
-                className="gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent hover:scale-105 transition-all duration-300 backdrop-blur-sm focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent hover:scale-105 transition-all duration-300 backdrop-blur-sm focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 w-full sm:w-auto flex-1 sm:flex-none"
                 aria-label={`Telefone: ${SITE_CONFIG.hero.ctaSecondary}`}
               >
-                <span><strong>{SITE_CONFIG.hero.ctaSecondary}</strong></span>
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                <span className="text-xl font-bold">{SITE_CONFIG.hero.ctaSecondary}</span>
               </Button>
             </div>
 

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { MapPin, Phone, ArrowRight, Instagram, Facebook } from "lucide-react"
+import { MapPin, Phone, MessageCircle, Instagram, Facebook } from "lucide-react"
 import { SITE_CONFIG } from "@/src/config/site-config"
 
 export function ContactFooter() {
@@ -13,7 +13,7 @@ export function ContactFooter() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
               {/* Left Column - Brand & Contact */}
               <div className="lg:col-span-7">
-                <div className="mb-6">
+                <div className="mb-6 flex flex-col items-center lg:items-start">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-h-marcio-tornearia-EUmC6uGXbsRN2BccHEk99X4Bph7lsP.png"
                     alt="Marcio Tornearia"
@@ -21,7 +21,7 @@ export function ContactFooter() {
                     height={70}
                     className="h-14 w-auto mb-4"
                   />
-                  <p className="text-white/60 text-sm">{SITE_CONFIG.footer.description}</p>
+                  <p className="text-white/60 text-sm text-center lg:text-left">{SITE_CONFIG.footer.description}</p>
                 </div>
 
                 <div className="space-y-4 mb-8">
@@ -38,15 +38,17 @@ export function ContactFooter() {
                 </div>
 
                 {/* CTA Button */}
-                <a 
-                  href={`https://wa.me/${SITE_CONFIG.contact.whatsapp}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-300 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                >
-                  {SITE_CONFIG.nav.ctaText}
-                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-                </a>
+                <div className="flex justify-center lg:justify-start">
+                  <a 
+                    href={`https://wa.me/${SITE_CONFIG.contact.whatsapp}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-300 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  >
+                    <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
+                    {SITE_CONFIG.nav.ctaText}
+                  </a>
+                </div>
               </div>
 
               {/* Right Column - Links & Social */}

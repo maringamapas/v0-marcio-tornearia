@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Como solicitar um orcamento?",
     answer:
-      "Voce pode nos enviar o desenho tecnico ou amostra da peca pelo WhatsApp (44 99932-4635) ou trazer diretamente em nosso endereco em Maringa. Respondemos orcamentos em ate 24 horas.",
+      "Voce pode nos enviar o desenho tecnico ou amostra da peca pelo WhatsApp (47 98456-0434) ou trazer diretamente em nosso endereco em Navegantes. Respondemos orcamentos em ate 24 horas.",
   },
   {
     question: "Qual a precisao das pecas?",
