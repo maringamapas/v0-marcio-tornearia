@@ -47,7 +47,7 @@ export const SITE_CONFIG = {
 
   // Redes Sociais
   social: {
-    instagram: "https://www.instagram.com/marcio_tornearia/",
+    instagram: "https://www.instagram.com/marcio_tornearia",
     facebook: "https://www.facebook.com/profile.php?id=100066677389181",
     threads: "https://www.threads.com/@marcio_tornearia",
   },
