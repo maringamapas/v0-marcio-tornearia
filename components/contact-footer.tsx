@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { MapPin, Phone, ArrowRight, Instagram, Facebook } from "lucide-react"
+import { MapPin, Phone, MessageCircle, Instagram, Facebook } from "lucide-react"
 import { SITE_CONFIG } from "@/src/config/site-config"
 
 export function ContactFooter() {
@@ -45,8 +45,8 @@ export function ContactFooter() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-300 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
+                    <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
                     {SITE_CONFIG.nav.ctaText}
-                    <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
                   </a>
                 </div>
               </div>
